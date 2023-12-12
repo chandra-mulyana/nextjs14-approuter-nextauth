@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nextjs14 + App Router + NextAuth
 
-## Getting Started
+## Cara menjalankan:
 
-First, run the development server:
+Gunakan perintah
 
-```bash
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nanti akan ada 2 halaman
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   Login
+-   Halaman Backend (hanya bisa diakses setelah login)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Gunakan
 
-## Learn More
+```
+user : admin
+password : test
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Saat masuk backend, nanti akan terlihat session nya :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+Isi Session Backend {
+  user: {
+    email: 'Isi alamat email',
+    nik: 'Isi NIK',
+    comp_code: 'Isi Company Code',
+    token: 'Isi Token'
+  }
+}
+```
 
-## Deploy on Vercel
+## Instalasi secara manual adalah sebagai berikut :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Jalankan perintah
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Install latest version Nextjs
+
+```
+npx create-next-app@latest
+√ What is your project named? ... nextjs14-approuter-nextauth
+√ Would you like to use TypeScript? ... No
+√ Would you like to use ESLint? ...  Yes
+√ Would you like to use Tailwind CSS? ... No
+√ Would you like to use `src/` directory? ... Yes
+√ Would you like to use App Router? (recommended) ...  Yes
+√ Would you like to customize the default import alias (@/*)? ... No
+```
+
+Kemudian samakan isi folder src seperti repo ini
+
+### Install NextAuth
+
+```
+npm install next-auth
+```
